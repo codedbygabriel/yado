@@ -65,18 +65,21 @@ def move_files_to_dirs(path: Path, img_path: str, pdf_path: str, text_path: str,
     if img_set:
         for image in img_set:
             os.system(f'mv {str(image)} {img_path}')
+        print("Images Were Organized.")
     else:
         print(f"No images on {path}")
 
     if pdfs_set:
         for pdf_current in pdfs_set:
             os.system(f'mv {str(pdf_current)} {pdf_path}')
+        print("PDF's Were Organized.")
     else:
         print(f"No pdfs on {path}")
 
     if txt_set:
         for txt_current in txt_set:
             os.system(f'mv {str(txt_current)} {text_path}')
+        print("Texts Were Organized.")
     else:
         print(f"No txts on {path}")
 
